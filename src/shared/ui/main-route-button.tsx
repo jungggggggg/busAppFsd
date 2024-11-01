@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity } from "react-native"
 
-export const MainRouteButton = ({ title, disabled, ...rest}) => {
+export const MainRouteButton = ({ title, ...rest}) => {
 
   return (
   <TouchableOpacity

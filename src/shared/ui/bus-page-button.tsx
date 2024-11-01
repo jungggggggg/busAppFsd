@@ -2,7 +2,7 @@ import { Animated, TouchableOpacity } from "react-native"
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useRef } from "react";
 
-export const ReloadingButton = ({ disabled, ...rest}) => {
+export const ReloadingButton = ({ ...rest}) => {
 
   const rotation = useRef(new Animated.Value(0)).current;
 
@@ -31,6 +31,7 @@ export const ReloadingButton = ({ disabled, ...rest}) => {
   return (
     <TouchableOpacity
       style={{ position: "absolute", right: 20, top: 25, zIndex: 10 }}
+      onPress={handleReloadPress}
       {...rest}
     >
       <Animated.View
@@ -45,6 +46,7 @@ export const ReloadingButton = ({ disabled, ...rest}) => {
         ]}
       >
         <Ionicons name="reload" size={20} color="white" />
+        <Ionicons name="information-circle-outline" size={20} color="white" />
       </Animated.View>
     </TouchableOpacity>
 )
